@@ -1,6 +1,10 @@
 require 'rack'
 require 'rack/contrib/try_static'
 
+use Rack::Auth::Basic, "Restricted Area" do |username, password|
+  [username, password] == ['username', 'password']
+end
+
 # Serve files from the build directory
 use Rack::TryStatic,
   root: 'build',
