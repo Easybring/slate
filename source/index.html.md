@@ -67,7 +67,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 # Tasks
 
-## Offers
+## Create an offer
 
 ```ruby
 require 'kittn'
