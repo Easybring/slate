@@ -116,7 +116,7 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint creates an offer (referred to the api as `job_action`) to a task.
 
 ### HTTP Request
 
