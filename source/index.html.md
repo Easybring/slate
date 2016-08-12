@@ -65,9 +65,9 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Tasks
 
-## Get All Kittens
+## Create an offer
 
 ```ruby
 require 'kittn'
@@ -116,7 +116,7 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint creates an offer (referred to the api as `job_action`) to a task.
 
 ### HTTP Request
 
