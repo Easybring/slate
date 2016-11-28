@@ -165,11 +165,11 @@ To create a funnel you must have sent all the needed events to mixpanel before. 
 ### Good to know before you start
 All Mixpanel funnels are based on __unique users, not total events sent__. The number you see for a step in a funnel is the number of your customers who completed that step of the funnel. Customers are only counted through the funnel once over the selected timespan of the funnel, even if they complete the funnel multiple times. <br/><br/>
 
-The customer does steps A -> B -> C -> D -> E in exact order. Mixpanel __will count__ this as a conversion.<br/><br/>
+The customer does steps A → B → C → D → E in exact order. Mixpanel __will count__ this as a conversion.<br/><br/>
 
-The customer does steps A -> B -> F -> C -> D -> E. Mixpanel __will count__ this as a conversion. This is an example of loose ordering.<br/><br/>
+The customer does steps A → B → F → C → D → E. Mixpanel __will count__ this as a conversion. This is an example of loose ordering.<br/><br/>
 
-The customer does steps A -> B -> C -> E. Mixpanel __will not count__ this as a full conversion, and the customer will not appear in the funnel after step C. The customer's completion of step E is excluded from the funnel because step D did not occur.<br/><br/>
+The customer does steps A → B → C → E. Mixpanel __will not count__ this as a full conversion, and the customer will not appear in the funnel after step C. The customer's completion of step E is excluded from the funnel because step D did not occur.<br/><br/>
 
 Mixpanel does not have a way to designate optional steps in the Funnel builder. However, there are two approaches that will allow you to analyze different, perhaps optional, steps that a user could take along the way:
 <ol>
@@ -209,6 +209,42 @@ Convert time is the available time you give to the user to complete the funnel i
 When all your steps are in place just press `Save` and your funnel is ready presenting and collecting data.
 
 <img src="images/save-funnel.png">
+
+
+## Read a funnel
+To read a funnel it must have some data collected. After this is done you just go to [Funnels page](https://mixpanel.com/report/1108498/funnels/) and select your funnel.
+
+<img src="images/funnel-selection.png">
+
+### Success per step
+Steps show how many unique users visited each step. If a user dropped in a specific step the next step will have less visits.
+
+<img src="images/funnel-steps.png">
+
+### Filter the funnel
+To filter a funnel you must have properties, properties are set manually on individual step. In the example above we saw a funnel for succesful delivery requests on partner campaign pages. But the default numbers are referring to the overall data and in our website we have three different variations of the partner page. In order to see which one is the most succesfull page we need to filter the funnel by our custom property, in this example is `variation`.
+
+<img src="images/filter-funnel.png">
+
+When your property is selected you can see all the different versions and their success rates below.
+
+<img src="images/filter-funnel-results.png">
+
+If you want to visually a specific variation into the top graph you can press the arrow (>) next to the property name.
+
+<img src="images/funnel-filter-version-1.png">
+
+Select the version you want to visualize.
+
+<img src="images/funnel-filter-version-2.png">
+
+The results appear in the graph above.
+
+<img src="images/funnel-filter-version-3.png">
+
+
+
+
 
 
 # Tasks
